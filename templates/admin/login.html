@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-GB">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>{{ title }}.</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/light.css' %}" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="division" style="border-right: 1px dotted var(--color)">
+                <div class="cont">
+                    <img src="{% static 'images/blog.png' %}" alt="blog" />
+                    <p>... for you and your fans ...</p>
+                </div>
+            </div>
+            <div class="division" style="border-left: 1px dotted var(--color)">
+                <div class="cont" id="signin">
+                    <h1>SIGN IN</h1>
+                    <form name="signin" method="post" action="{% verbatim %}{% url 'signin' %}{% endverbatim %}">
+                        <div class="input-group">
+                            <input autocomplete="off" id="username" name="username" placeholder="Username..." type="text" />
+                        </div>
+                        <div class="input-group">
+                            <input autocomplete="off" id="password" name="password" placeholder="Password..." type="password" />
+                        </div>
+                        <input type="submit" value="SIGN IN" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'js/script.js' %}"></script>
+        <script src="{% static 'js/angular.min.js' %}"></script>
+        {% comment %}
+        <script>
+            app = angular.module('app1', []);
+            app.controller('namesCtrl', function ($scope) {
+                $scope.fun = function () {
+                    alert("Yiodjkdn")
+                }
+            });
+        </script> {% endcomment %}
+    </body>
+
+</html>

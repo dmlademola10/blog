@@ -1,0 +1,40 @@
+body, html {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif!important;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    background-color: var(--bg-color);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.division {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+.input-group {
+    display: flex;
+    border: 1px solid var(--color);
+    margin: 5px;
+    padding: 2px;
+    border-radius: 1rem;
+    overflow: hidden;
+    flex-direction: row;
+}
+.input-group input {
+    font-size: xx-large;
+    max-width: 100%;
+    flex: 1;
+    border: 0;
+}
+input:focus {
+    outline: 0;
+}
